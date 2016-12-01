@@ -1,5 +1,5 @@
-# LeetCode-Solutions
-Leet Code Solutions in C++
+# LeetCode-Algorithms-Solutions
+Leet Code Solutions for Algorithms Questions in C++
 
 https://leetcode.com/problemset/algorithms/
 
