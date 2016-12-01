@@ -1,6 +1,8 @@
 # LeetCode-Solutions
 Leet Code Solutions in C++
 
+https://leetcode.com/problemset/algorithms/
+
 Solutions for LeetCode Algorithms Problems
 
 1) Two Sum
