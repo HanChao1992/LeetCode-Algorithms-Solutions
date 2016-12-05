@@ -34,3 +34,11 @@ https://leetcode.com/problems/zigzag-conversion/
 ## 7) Reverse Integer (Accepted)
 
 Reverse digits of an integer.
+
+## 8) String to Integer (Skipped)
+
+Implement atoi to convert a string to an integer.
+
+## 9) Palindrome Number (Accepted)
+
+Determine whether an integer is a palindrome.
