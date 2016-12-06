@@ -18,8 +18,6 @@ public:
              char tempchar = s[start];
              mapping.clear();
              mapping[tempchar] = start;
-             
-
             }
             else {
               mapping[s[i]] = i;
