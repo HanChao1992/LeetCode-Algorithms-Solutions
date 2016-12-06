@@ -42,3 +42,7 @@ Implement atoi to convert a string to an integer.
 ## 9) Palindrome Number (Accepted)
 
 Determine whether an integer is a palindrome.
+
+## 14) Longest Common Prefix (Accepted)
+
+Write a function to find the longest common prefix string amongst an array of strings.
