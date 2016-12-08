@@ -5,7 +5,7 @@ public:
         map<char, int> mapping;
 
         int start, end;
-        pair<int, int> max = make_pair(0, 0);
+        int max = 0;
         start = 0;
         int i = 0;
         int sublen = 0;
@@ -18,21 +18,17 @@ public:
              char tempchar = s[start];
              mapping.clear();
              mapping[tempchar] = start;
-            }
-            else {
-              mapping[s[i]] = i;
-              end = i;
-              i++;
+           }
+           else {
+             mapping[s[i]] = i;
+             end = i;
+             i++;
             }
             sublen = end - start + 1;
-            if (max.first < sublen) {
-                max.first = sublen;
-                max.second = start;
+            if (max < sublen) {
+                max = sublen;
             }
         }
-        //cout << "Start from " << max.second << endl;
-        //cout << s.substr(max.second, max.first);
-        return max.first;
-
+        return max;
     }
 };
