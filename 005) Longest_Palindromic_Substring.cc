@@ -1,3 +1,4 @@
+// Brute Force
 class Solution {
 public:
     bool isPalindrome(string s) {
@@ -33,5 +34,41 @@ public:
         }
         string result = s.substr(start, max);
         return result;
+    }
+};
+
+// Dynamic Programming 
+class Solution {
+public:
+    string longestPalindrome(string s) {
+        int len = s.length();
+        bool sub[len][len];
+        int maxlen = 1;
+        int start = 0;
+        memset(sub, 0 , sizeof(sub));
+        for (int i = 0; i < len; i++) {
+            sub[i][i] = true;
+        }
+        
+        for (int i = 0; i < len - 1; i++) {
+            if (s[i] == s[i + 1]) {
+                sub[i][i+1] = true;
+                start = i;
+                maxlen = 2;
+            }
+        }
+        for (int j = 3; j <= len; j++) {
+            for(int i = 0; i < len-j+1; i++) {
+                int q = i + j - 1;
+                if(sub[i+1][q-1] && s[i] == s[q]) {
+                    sub[i][q] = true;
+                    if (j > maxlen) {
+                        start = i;
+                        maxlen = j;
+                    }
+                }
+            }
+        }
+        return s.substr(start, maxlen);
     }
 };
