@@ -43,6 +43,10 @@ Implement atoi to convert a string to an integer.
 
 Determine whether an integer is a palindrome.
 
+## 10) Regular Expression Matching (In Progress)
+
+Implement regular expression matching with support for '.' and '*'.
+
 ## 14) Longest Common Prefix (Accepted)
 
 Write a function to find the longest common prefix string amongst an array of strings.
