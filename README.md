@@ -54,3 +54,7 @@ Write a function to find the longest common prefix string amongst an array of st
 ## 19) Remove Nth Node From End of List (Accepted)
 
 Given a linked list, remove the Nth node from the end of list and return its head.
+
+## 21) Merge Two Sorted Lists (Accepted)
+
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
