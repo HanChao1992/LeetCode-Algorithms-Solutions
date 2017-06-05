@@ -50,3 +50,7 @@ Implement regular expression matching with support for '.' and '*'.
 ## 14) Longest Common Prefix (Accepted)
 
 Write a function to find the longest common prefix string amongst an array of strings.
+
+## 19) Remove Nth Node From End of List (Accepted)
+
+Given a linked list, remove the Nth node from the end of list and return its head.
