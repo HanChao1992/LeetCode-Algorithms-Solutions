@@ -1,34 +1,21 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int len = s.length();
-        map<char, int> mapping;
-
-        int start, end;
+        unordered_map<char, int> help;
+        unordered_map<char, int>::iterator it;
         int max = 0;
-        start = 0;
-        int i = 0;
-        int sublen = 0;
-         while (i < len) {
-           if (mapping.find(s[i]) != mapping.end()) {
-             //cout << "Found " << s[i] << " in position " << i << " in map position " << mapping[s[i]] << endl;
-             int temp = i;
-             i = mapping[s[temp]] + 2;
-             start = mapping[s[temp]] + 1;
-             char tempchar = s[start];
-             mapping.clear();
-             mapping[tempchar] = start;
-           }
-           else {
-             mapping[s[i]] = i;
-             end = i;
-             i++;
+        for (int j = 0, i = 0; j < s.length(); j++) {
+            it = help.find(s[j]);
+            if (it != help.end()) {
+                i = maxi(help[s[j]], i);    
             }
-            sublen = end - start + 1;
-            if (max < sublen) {
-                max = sublen;
-            }
+            max = maxi(max, j - i + 1);
+            help[s[j]] = j + 1;
         }
         return max;
+    }
+    
+    int maxi(int a, int b) {
+        return a > b ? a : b;
     }
 };
